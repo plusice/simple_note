@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+
+    "name": "simple note",
+    "description": "This extension help you make notes conveniently",
+    "version": "1.0",
+
+    "permissions": [
+      "contextMenus"
+    ],
+
+    "icons": {
+        "16": "icon-bitty.png",
+        "48": "icon-small.png"
+    },
+
+    "background": {
+        "persistent": false,
+        "scripts": ["bg/bg.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": ["fg/jquery-1.9.1.js","fg/content.js"],
+            "run_at": "document_end"
+        }
+    ],
+
+    "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup/popup.html"
+    }
+
+}
