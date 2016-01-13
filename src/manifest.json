@@ -25,7 +25,7 @@
                 "http://*/*",
                 "https://*/*"
             ],
-            "js": ["fg/jquery-1.9.1.js","fg/content.js"],
+            "js": ["fg/content.js"],
             "run_at": "document_end"
         }
     ],
